@@ -187,11 +187,11 @@ body {
 
 /* ── Mobile-specific adjustments ─────────────────────────────── */
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
   :root {
     --square-size: min(11.5vw, 50px);
     --piece-size: min(7.5vw, 32px);
-    --captured-size: min(5vw, 20px);
+    --captured-size: min(4vw, 20px);
     --dot-size: min(3vw, 16px);
   }
 
@@ -201,11 +201,29 @@ body {
   }
 
   .board-area {
-    gap: 6px;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
   }
 
   .captured-panel {
-    min-width: 32px;
-    padding: 4px 2px;
+    width: auto;
+    min-width: unset;
+    flex-direction: row;
+    padding: 6px 12px;
+    gap: 8px;
+  }
+
+  .captured-label {
+    writing-mode: horizontal-tb;
+  }
+
+  .captured-pieces {
+    flex-direction: row;
+    gap: 2px;
+  }
+
+  .captured-empty {
+    margin-top: 0;
   }
 }
